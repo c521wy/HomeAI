@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  HomeAI:
+    build: .
+    image: c521wy/home-ai:latest
+    volumes:
+      - ./config.json:/etc/HomeAI.json
+    ports:
+      - 8888:8888
