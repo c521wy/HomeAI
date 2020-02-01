@@ -2,3 +2,5 @@
 *.iml
 .idea
 
+# go build
+bin

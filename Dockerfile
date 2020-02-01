@@ -7,8 +7,9 @@ WORKDIR /usr/local/HomeAI/
 RUN \
 set -x && \
 sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
-apk add go && \
-go build -o /usr/local/bin/HomeAI
+apk add go git && \
+./build.sh && \
+mv ./bin/HomeAI /usr/local/bin/HomeAI
 
 FROM alpine
 
